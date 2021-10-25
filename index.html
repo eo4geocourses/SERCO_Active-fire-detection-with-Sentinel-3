@@ -14,46 +14,50 @@
 	<head>
 		<meta charset="utf-8">
 		 
-		<title>eo4geo template for Reveal JS</title>
+		<title>Active Fire Detection with Sentinel-3 data</title>
 		
 	<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) -->	
-		<meta property="dc:title" content="What is Copernicus?" />
-		<meta property="dc:creator" content="Stefan Lang" /> 
-		<meta property="dc:publisher" content="University of Salzburg" /> 
-		<meta property="dc:subject" content="Copernicus, EO4GEO, WP5, Satellite, Earth Observation" />
-		<meta property="dc:abstract" content="This is a template slideset for EO4GEO Partners to familiarize with EO4GEO, introducing the idea of Copernicus and its services. Nevertheless, content-generation is not the prime concern of the template" />
-		<meta property="dc:tableOfContents" content="(1) What is EO?; 
-							     (2) Benefits of Copernicus; 
-							     (3) Integration of Jupyter Notebooks; 
-							     (4) Integration of Youtube Video; 
-							     (5) Integration of H5P; 
-							     (6) Copernicus Services; 
-							     (7) Reference list; />
-		<meta property="dc:description" content="Learning outcomes: Understand remote sensing workflow including image acquisition, (pixel-based) image analysis, classification and validation; get to know online portals, data catalogues, and pricing schemes for satellite data; Familiarize with the European Copernicus Earth observation programme; Master standard image analysis routines as implemented in ArcGIS Pro" /> 
-		<meta property="dc:contributor" content="Barbara Hofer" />
-		<meta property="dc:contributor" content="Eva Missoni" />
-		<meta property="dc:created" content="2020-06-20" />
-		<meta property="dc:type" content="teaching material" /> 
-		<meta property="dc:format" content="html" />
+		<meta property="dc:title" content="Active fire detection with Sentinel-3" />
+		<meta property="dc:creator" content="Tereza Roth" /> 
+		<meta property="dc:publisher" content="SERCO UK&E" /> 
+		<meta property="dc:subject" content="Copernicus, EO4GEO, Sentinel-3, Satellite, Earth Observation, Active fire detection, Image processing" />
+		<meta property="dc:abstract" content="These materials provides an introduction to concepts and methods of Sentinel-3 data processing and their application in active fires detection. The slides have been prepared for webinar organized by Serco EO Training and promoted by EO4GEO" />
+		<meta property="dc:tableOfContents" content="(1) Introduction to the exercise; 
+							     (2) Concepts of Copernicus Programme data and Services; 
+							     (3) Sentinel-3 characteristics and applications; 
+							     (4) Exercise - Active Fire Detection with Sentinel-3 data:
+								 (4.1) Image preprocessing - Day and Night data; 
+							     (4.2) Active Fire Detection (day and night-time);
+								 (4.3) Exporting results;
+								 (4.4) Comparing results with operational monitoring
+								 (5) Extra Steps
+							     (6) Reference list; />
+		<meta property="dc:description" content="Learning outcomes: Understand satellite data acquisition from Copernicus Open Access Hub; Understand principles of data processing; Understand the concept and characteristics of Sentinel-3 SLSTR instrument and data it provides; Become familiar with the concept of active fire detection using Sentinel-3 data (night and day-time detection); Create a fire detection algorithm (night and day-time) and visualize areas with active fires; Compare results with operational monitoring from Global Wildfire Information System" /> 
+		<meta property="dc:contributor" content="Tereza Roth" />
+		<meta property="dc:created" content="2021-10-25" />
+		<meta property="dc:type" content="webinar/workshop" /> 
+		<meta property="dc:format" content="mp4" />
 		<meta property="dc:language" content="EN" />
-		<meta property="dc:SizeOrDuration" content="45min" />
-		<meta property="dc:audience" content="students" />
-		<meta property="dc:educationLevel" content="EQF 6" />
-		<meta property="dc:source” content="Existing youtube-video on Copernicus Climate Change Service; existing Jupyter Notebook on "Well switching in Bangladesh" />
-		<meta property="dc:rightsHolder" content="Stefan Lang" />
+		<meta property="dc:SizeOrDuration" content="60min" />
+		<meta property="dc:audience" content="students, researchers, environmentalists " />
+		<meta property="dc:educationLevel" content="EQF 3" />
+		<meta property="dc:source” content="Existing youtube-video on ESA; exsisting training materials on Serco EO Training website" />
+		<meta property="dc:rightsHolder" content="Tereza Roth" />
 		<meta property="dc:license" content="https://creativecommons.org/licenses/by-sa/4.0/deed.en" />
 
-		<link rel="dc:relation" href="eo4geo:IP1-3-2" />
-		<link rel="dc:relation" href="eo4geo:IP1-7" />
-		<link rel="dc:relation" href="eo4geo:IP1" />	
-		<link rel="dc:relation" href="eo4geo:IP3-4" />
-		<link rel="dc:relation" href="eo4geo:IP4-2-1" />
+		<link rel="dc:relation" href="eo4geo:IP6" />
+		<link rel="dc:relation" href="eo4geo:GS3-4" />
+		<link rel="dc:relation" href="eo4geo:TA12" />	
+		<link rel="dc:relation" href="eo4geo:TA12-1" />
+		<link rel="dc:relation" href="eo4geo:TA13" />
+		<link rel="dc:relation" href="eo4geo:TA13-3" />
+		<link rel="dc:relation" href="eo4geo:TA13-3-2" />
 
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
 		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
 		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
 		<link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css">
-		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme">  <!-- anthrazit background design --> 
+		<!--link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo_grey.css" id="theme">  <!-- anthrazit background design --> 
 		<!-- EO4GEO FONT ROBOTO SLAB -->
 		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
 		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
@@ -71,8 +75,8 @@
 			
 				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
 			
-				 <div class = "partnerlogo" style="width: 7%;height : 7%" ></div>		
-				 <div  class = "presentation_title" style=" text-align: center " >Landslide affecting Cultural Heritage sites - Roman Thermae of Baia</div>	<!--The title of the presentation appears on each slide-->
+				 <div class = "partnerlogo" style="width: 10%;height : 7%" ></div>		
+				 <div  class = "presentation_title" style=" text-align: center " >Active fire detection with Sentinel-3 data</div>	<!--The title of the presentation appears on each slide-->
 
 				<div class="slides">
 				
@@ -80,9 +84,9 @@
 				<!-- HEADER SLIDE: Put title of your training action here! --> 
 
 				<section >
-					<h1>Landslide affecting Cultural Heritage sites - Roman Thermae of Baia</h1> 
+					<h1>Active fire detection with Sentinel-3 data</h1> 
 					<br>
-					<h2>An EO4GEO MOOC material collection <h2>
+					<h2>EO4GEO webinar material collection<h2>
 					<br>
 				</section>
 
@@ -105,22 +109,17 @@
 							<a href="https://www.copernicus.eu/en/opportunities/education/copernicus-mooc">
 								<img height="30px" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" class="plain" alt="link icon">
 							</a></td></tr>
-						<tr><td><a href="#slide16">2.1</a></td><td>Copernicus Land Monitoring Service components and applications</td><td width="30%">
-							<a href="https://eo4geocourses.github.io/GEOF_Copernicus-Service-Land/">
+						<tr><td><a href="#slide16">3</a></td><td>Sentinel-3 mission overview</td><td width="30%">
+							<a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-3">
 								<img height="30px" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" class="plain" alt="link icon">
 							</a></td></tr>
-						<tr><td><a href="#slide29">3</a></td><td>Cultural Heritage - Phlegrean Fields Archaeological Park</td><td width="30%">	
-							<a href="index_04_SDI_processes.html"> 
+						<tr><td><a href="#slide29">4</a></td><td>Exercise: Active fire detection with Sentinel-3</td><td width="30%">	
+							<a href="https://eotraining-serco.com/tutorials/active-fire-detection-with-sentinel-3/"> 
 								<img height="30px" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" class="plain" alt="link icon">	
 							</a></td></tr>
-						<tr><td><a href="#slide29">3.1</a></td><td>Roman Thermae of Baia: history and monuments</td>
+						<tr><td><a href="#slide29">5</a></td><td>More information on SNAP software</td>
 						<td width="30%">
-							<a href="index_05_SDI_performance.html">
-								<img height="30px" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" class="plain" alt="link icon">	
-							</a></td></tr>
-						<tr><td><a href="#slide29">4</a></td><td>Geohazard assessment - Background knowledge on natural risk management and assessment</td>
-						<td width="30%">
-							<a href="index_05_SDI_performance.html">
+							<a href="https://step.esa.int/main/">
 								<img height="30px" data-src="https://eo4geo.sbg.ac.at/KULeuven/resources/template_WhatCopernicus/image4689.png" class="plain" alt="link icon">	
 							</a></td></tr>
 					
