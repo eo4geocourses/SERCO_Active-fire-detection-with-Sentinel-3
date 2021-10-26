@@ -15,10 +15,8 @@ Two cloud-free Sentinel-3A Level 1B RBT products acquired on June 18, 2017 (afte
 Software: Internet browser, SNAP + Sentinel-3 Toolbox, QGIS,  Extra steps: Google Earth 
 
 Learning outcomes: 
-
-* Understand satellite data acquisition from Copernicus Open Access Hub  
-* Understand principles of data processing
-* Understand the concept and characteristics of Sentinel-3 SLSTR instrument and data it provides  
+* Understand the concept and characteristics of Sentinel-3 SLSTR instrument and data it provides 
+* Understand principles of data processing 
 * Become familiar with the concept of active fire detection using Sentinel-3 data (night and day-time detection) 
 * Create a fire detection algorithm (night and day-time) and visualize areas with active fires
 * Compare results with operational monitoring from Global Wildfire Information System
